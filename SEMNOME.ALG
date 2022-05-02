@@ -2,7 +2,7 @@ Algoritmo "Atividade 1"
 // Disciplina   : Sistema da informação
 // Professor   :  Ivson Estevão Soares
 // Descrição   : Atividade 1
-// Autor(a)    : Rafael Luis
+// Autor(a)    : Rafael Luis,Lidyane Alves, Larissa Batista
 // Data atual  : 02/05/2022
 Var
 

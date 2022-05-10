@@ -48,7 +48,7 @@ Inicio
 
        subi <- soma - 45
        
-
+       limpaTela
 
        escreval ("---------- Dados do usuário ----------")
 

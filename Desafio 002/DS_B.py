@@ -15,40 +15,51 @@ lista_nome = []
 lista_idade = []
 lista_sexo = []
 
+nome = ''
+idade = ''
+sexo = ''
 
 while True:
+    print('\n','='*57,'\n')                                              # DIVISÓRIA
 
-    nome = input('Qual o seu nome? ')                                # Armazena nome
+    print(' Digite 0 nos 2 campos para parar a consulta!\n')             # DIVISÓRIA
 
-    lista_nome.append(nome)
+    if nome != '0':
+                  
 
-    idade = int(input('Qual a sua idade? '))                         # Armazena idade
+        nome = input('Qual o seu nome? ')                                    # Armazena nome
 
-    lista_idade.append(idade)
+        lista_nome.append(nome)
 
-    sexo = str(input('Qual o seu sexo? (M/F): ' ))                  # Armazena sexo1
+        
+        idade = int(input('Qual a sua idade? '))                             # Armazena idade
 
-    if sexo.strip('asc' and 'asculino').upper() == 'M':
-       lista_sexo.append(sexo)
-       
-       print( lista_sexo)
+        lista_idade.append(idade)
 
+        sexo = str(input('Qual o seu sexo? (M/F): ')).upper()                # Armazena sexo1
 
+        if sexo[0] == 'M':                                                   # valição do sexo
+            sexo = 'M'
 
+        elif sexo[0] == 'F':
+            sexo = 'F'
 
+        lista_sexo.append(sexo)                                             # Fechamento da validção
+    elif nome == '0':
 
+        break                                                  
 
+    os.system('cls')
 
+    print('\n','='*57,'\n')   # DIVISÓRIA
 
-# CONDIÇÃO DE EXIBIÇÃO DE NOME (SEXO MASCULINO COM MAIS DE 21 ANOS)
+    # CONDIÇÃO DE EXIBIÇÃO DE NOME (SEXO MASCULINO COM MAIS DE 21 ANOS)
 
-if idade1 and idade2 > 21 and sexo1 == 'M' and sexo2 == 'M':
-    print('Nome: \n\n - {} \n - {}'.format(nome1, nome2))
+    if lista_idade > 21 and sexo1 == 'M' and sexo2 == 'M':
+        print('Nome: \n\n - {} \n - {}'.format(nome1, nome2))
 
-elif idade1 > 21 and sexo1 != 'F':
-    print('Nome: \n\n - {}'.format(nome1))
+    elif idade1 > 21 and sexo1 != 'F':
+        print('Nome: \n\n - {}'.format(nome1))
 
-elif idade2 > 21 and sexo2 != 'F':
-    print('Nome: \n\n - {}'.format(nome2))
-
-
+    elif idade2 > 21 and sexo2 != 'F':
+        #print('Nome: \n\n - {}'.format(nome2))
